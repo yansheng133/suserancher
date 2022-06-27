@@ -15,6 +15,6 @@ curl -LO https://dl.k8s.io/release/v1.23.7/bin/linux/amd64/kubectl
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 mkdir -p /home/rancher/.kube/
 sudo cp /etc/rancher/rke2/rke2.yaml /home/rancher/.kube/config
-sudo chown rancher -v .kube/config
+sudo chown rancher -v /home/rancher/.kube/config
 echo 'source <(kubectl completion bash)' >> /home/rancher/.bashrc
 source /home/rancher/.bashrc
